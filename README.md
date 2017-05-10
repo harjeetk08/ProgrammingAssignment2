@@ -77,7 +77,7 @@ Write the following functions:
 
 ##This function creates a special "matrix object thatcan cache its inverse.
 
-    'makeCacheMatrix <- function(x = matrix()) {
+     makeCacheMatrix <- function(x = matrix()) {
   	inv <- NULL
   	set <- function(y){
    	x <<- y
@@ -87,7 +87,7 @@ Write the following functions:
         setInverse <- function(solveMatrix) inv <<- solveMatrix
         getInverse <- function() inv
         list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
-    }'
+    }
 
  
 2.  `cacheSolve`: This function computes the inverse of the special
@@ -99,7 +99,7 @@ Write the following functions:
     `makeCacheMatrix` above. 
 
 
-      'cacheSolve <- function(x, ...) {
+       cacheSolve <- function(x, ...) {
 
        ## Return a matrix that is the inverse of 'x'
 
@@ -112,7 +112,7 @@ Write the following functions:
           inv <- solve(data)
           x$setInverse(inv)
           inv      
-      }'
+      }
 
 
 Computing the inverse of a square matrix can be done with the `solve`
